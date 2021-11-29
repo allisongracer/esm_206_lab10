@@ -1,0 +1,59 @@
+---
+title: "Lab 10"
+author: "Allison Gracer"
+date: "11/29/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(janitor)
+library(usethis)
+library(beepr)
+library(praise)
+library(cowsay)
+library(paletteer)
+library(sf)
+```
+
+## beepr::beep()
+This function plays sounds when your code is done running, useful when your code takes sometime to run.
+
+Use `beep()` to give yourself an audio alert.
+
+## write a for loop + beep
+
+```{r, eval = FALSE}
+for (i in rev(seq(1:99))) {
+  print(paste(i, "bottles of beer on the wall"))
+}
+
+beep(4)
+```
+
+## praise is nice
+
+```{r}
+praise("${EXCLAMATION}!!! This code works ${adverb_manner}!")
+
+praise("Holy ${creating}, Batman - this code works ${ADVERB_MANNER}!")
+```
+
+
+## cowsay::say to have charachters say something
+
+```{r}
+say("I love tacos!", by ="poop")
+```
+
+## usethis for everything
+cowsay::say(praise::praise("You are ${ADJECTIVE}!"), by = "trilobite")
+
+R project first, then git & Github repo.
+
+-usethis::use_git()
+-usethis::use_github()
+
+
+
